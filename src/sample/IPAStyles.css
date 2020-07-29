@@ -1,0 +1,31 @@
+.button {
+    -fx-border-color: black;
+    -fx-border-radius: 3px;
+    -fx-pref-height: 27px;
+    -fx-pref-width: 80px;
+}
+
+.windowView {
+    -fx-background-color: lightgrey;
+}
+
+.addBorder {
+    -fx-border-color: darkgrey;
+    -fx-border-radius: 10px;
+}
+
+.titleLabel {
+    -fx-font-family: Arial;
+    -fx-font-weight: 700;
+    -fx-text-fill: darkslateblue;
+    -fx-padding: 30px;
+}
+
+.formField {
+    -fx-font-family: Arial;
+    -fx-font-style: italic;
+}
+
+#errorMessage {
+    -fx-text-fill: crimson;
+}

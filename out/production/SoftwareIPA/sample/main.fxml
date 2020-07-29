@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="20.0" prefHeight="334.0" prefWidth="1038.0" styleClass="windowView" stylesheets="@IPAStyles.css" vgap="20.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" prefHeight="100" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <Label styleClass="titleLabel" text="Inventory Management System" />
+    </HBox>
+
+    <VBox prefHeight="100" prefWidth="300" styleClass="addBorder" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label prefHeight="27.0" prefWidth="175.0" text="Parts" />
+            <Button styleClass="button" text="Search" />
+            <TextField fx:id="searchPartField">
+                <HBox.margin>
+                    <Insets left="10.0" />
+                </HBox.margin></TextField>
+        </HBox>
+        <TableView fx:id="tablePart" prefHeight="500.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="partIDCol" minWidth="-Infinity" prefWidth="115.0" text="Part ID" />
+                <TableColumn fx:id="partNameCol" prefWidth="120.0" text="Part Name" />
+                <TableColumn fx:id="invLevelCol" prefWidth="120.0" text="Inventory Level" />
+                <TableColumn fx:id="costPerUnitCol" prefWidth="120.0" text="Price/Cost per Unit" />
+            </columns>
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Button onAction="#changeToAddPart" styleClass="button" text="Add" />
+            <Button onAction="#changeToModifyPart" styleClass="button" text="Modify" />
+            <Button onAction="#handleDeletePart" styleClass="button" text="Delete" />
+            <padding>
+                <Insets bottom="10.0" right="30.0" />
+            </padding>
+        </HBox>
+    </VBox>
+
+    <VBox prefHeight="100" prefWidth="300" styleClass="addBorder" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="40.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label prefHeight="27.0" prefWidth="175.0" text="Products" />
+
+            <Button styleClass="button" text="Search" />
+            <TextField fx:id="searchProductField">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin></TextField>
+        </HBox>
+      <TableView fx:id="tableProduct" prefHeight="500.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="productIDCol" minWidth="-Infinity" prefWidth="115.0" text="Product ID" />
+            <TableColumn fx:id="productNameCol" prefWidth="120.0" text="Product Name" />
+            <TableColumn fx:id="productInvLevelCol" prefWidth="120.0" text="Inventory Level" />
+            <TableColumn fx:id="productPricePerCol" prefWidth="120.0" text="Price per Unit" />
+        </columns>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </TableView>
+        <HBox alignment="CENTER_RIGHT" minHeight="-Infinity" prefHeight="50.0" spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Button onAction="#changeToAddProduct" styleClass="button" text="Add" />
+            <Button onAction="#changeToModifyProduct" styleClass="button" text="Modify" />
+            <Button styleClass="button" text="Delete" />
+         <padding>
+            <Insets bottom="10.0" right="30.0" />
+         </padding>
+        </HBox>
+    </VBox>
+
+    <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button fx:id="exit" onAction="#handleExitButtonAction" styleClass="button" text="Exit" />
+      <padding>
+         <Insets right="20.0" />
+      </padding>
+    </HBox>
+
+   <columnConstraints>
+      <ColumnConstraints maxWidth="185.0" minWidth="500.0" prefWidth="500.0" />
+      <ColumnConstraints minWidth="500.0" prefWidth="500.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="42.0" minHeight="40.0" prefHeight="50.0" />
+      <RowConstraints minHeight="200.0" prefHeight="200.0" />
+      <RowConstraints minHeight="30.0" prefHeight="40.0" />
+   </rowConstraints>
+
+
+
+</GridPane>

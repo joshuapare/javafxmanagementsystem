@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane styleClass="windowView" stylesheets="@IPAStyles.css" prefHeight="382.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ModifyPartController">
+
+    <HBox alignment="CENTER_LEFT" spacing="50.0" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="0">
+        <Label styleClass="titleLabel" text="Modify Part" />
+        <RadioButton fx:id="rbInHouse" mnemonicParsing="false" text="In-House">
+            <toggleGroup>
+                <ToggleGroup fx:id="tg1" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="rbOutsourced" mnemonicParsing="false" text="Outsourced" toggleGroup="$tg1" />
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </padding>
+    </HBox>
+
+
+
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <Label text="ID" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+        <TextField fx:id="id" styleClass="formField" text="Auto-Gen - Disabled" disable="true"/>
+    </HBox>
+
+
+
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Label text="Name" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+        <TextField fx:id="name" styleClass="formField" text="Part Name" />
+    </HBox>
+
+
+
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <Label text="Inv" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3">
+        <TextField fx:id="inv" styleClass="formField" text="Inv" />
+    </HBox>
+
+
+
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Label text="Price/Cost" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+        <TextField fx:id="cost" styleClass="formField" text="Price/Cost" />
+    </HBox>
+
+
+
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <Label text="Max" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="5">
+        <TextField fx:id="max" styleClass="formField" prefHeight="27.0" prefWidth="91.0" text="Max" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="3" GridPane.rowIndex="5">
+        <Label prefWidth="30.0" text="Min">
+            <HBox.margin>
+                <Insets left="20.0" />
+            </HBox.margin></Label>
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="4" GridPane.rowIndex="5">
+        <TextField fx:id="min" styleClass="formField" prefWidth="100.0" text="Min" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <Label fx:id="switchLabel" text="Company Name" />
+    </HBox>
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="6">
+        <TextField styleClass="formField" fx:id="companyNameMachineIdText"  text="Comp Nm" />
+    </HBox>
+
+    <HBox alignment="CENTER_RIGHT" spacing="20.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+        <Button styleClass="button" onAction="#handleUpdatePartAction" text="Save" />
+        <Button styleClass="button" onAction="#changeToMain" text="Cancel" />
+        <padding>
+            <Insets right="20.0" />
+        </padding>
+
+    </HBox>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="58.0" minWidth="4.0" prefWidth="50.0" />
+        <ColumnConstraints maxWidth="122.0" minWidth="64.0" prefWidth="98.0" />
+        <ColumnConstraints maxWidth="163.0" minWidth="87.0" prefWidth="91.0" />
+        <ColumnConstraints maxWidth="98.0" minWidth="38.0" prefWidth="56.0" />
+        <ColumnConstraints maxWidth="177.0" minWidth="104.0" prefWidth="169.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="40.0" />
+        <RowConstraints prefHeight="40.0" />
+        <RowConstraints prefHeight="40.0" />
+        <RowConstraints prefHeight="40.0" />
+        <RowConstraints prefHeight="40.0" />
+        <RowConstraints prefHeight="40.0" />
+        <RowConstraints prefHeight="40.0" />
+        <RowConstraints prefHeight="40.0" />
+    </rowConstraints>
+
+
+
+
+
+
+
+
+
+
+
+
+</GridPane>
+
